@@ -1,0 +1,48 @@
+<div class="container mt-4">
+  <div class="card ml-auto" style="width: 50rem;">
+    <div class="row">
+      <div class="col-md-6"  data-toggle="modal" data-target="#myModal" *ngFor="let item of data">
+        <div class="card shadow p-3 mb-5 bg-white rounded"   (click)="viewImage(item)">
+          <img [src]="item.thumbnail.large" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">{{item.content}}</p>
+            <p>{{item.author.name}} - {{item.author.role}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--======================[working area start]==================== -->
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+
+      <!-- Modal body -->
+      <div class="card" >
+        <div class="row">
+          <div class="col-md-6"  data-toggle="modal" data-target="#myModal" >
+            <div class="card" style="width: 20rem;">
+              <img src="{{cardData?.thumbnail?.large }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{cardData?.author?.name}}</h5>
+                <p class="card-text">{{cardData?.content}}</p>
+                <img class="img-circle" src="{{cardData?.author?.avatar}}" alt="" height="50px" width="50px" style="border-radius: 50%;">&nbsp;&nbsp;
+                <span href="#" >{{cardData?.author?.role}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal body END -->
+    </div>
+  </div>
+</div>
+<!-- =================================[working area end]============================= -->
