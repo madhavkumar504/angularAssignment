@@ -1,7 +1,7 @@
 <div class="container mt-4">
-  <div class="card ml-auto" style="width: 50rem;">
+  <div class="card ml-auto" style="width: auto;">
     <div class="row">
-      <div class="col-md-6"  data-toggle="modal" data-target="#myModal" *ngFor="let item of data">
+      <div class="col-xl-6"  data-toggle="modal" data-target="#myModal" *ngFor="let item of data">
         <div class="card shadow p-3 mb-5 bg-white rounded"   (click)="viewImage(item)">
           <img [src]="item.thumbnail.large" class="card-img-top" alt="...">
           <div class="card-body">
